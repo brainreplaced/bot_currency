@@ -6,9 +6,10 @@ from telegram.ext import Updater, CommandHandler, CallbackContext
 import schedule
 import time
 from datetime import datetime
+import os
 
-# Вставьте сюда ваш tg токен
-TOKEN = "ВАШ_ТОКЕН"
+# Токен бота
+TOKEN = os.getenv("TELEGRAM_TOKEN")
 
 # URL для получения курса валют от ЦБРФ
 CURRENCY_API_URL = 'https://www.cbr-xml-daily.ru/daily_json.js'
